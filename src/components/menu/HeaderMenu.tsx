@@ -6,7 +6,6 @@ const menuItems = [
   { title: "Мои знания", href: "skills" },
   { title: "Обо мне", href: "aboutme" },
   { title: "Мои работы", href: "portfolio" },
-  // { title: "Контакт", href: "contact" },
 ];
 
 export const HeaderMenu = () => {
@@ -20,7 +19,7 @@ export const HeaderMenu = () => {
               to={item.href}
               smooth={true}
               spy={true}
-              offset={-30}
+              offset={-80}
             >
               {item.title}
               <Mask>
@@ -42,7 +41,6 @@ const StyledHeaderMenu = styled.nav`
     display: flex;
     align-items: center;
     width: 590px;
-    /* width: 100%; */
     justify-content: space-between;
     font-size: 18px;
     color: white;
@@ -59,7 +57,6 @@ const Mask = styled.span`
   left: 0;
   display: inline-block;
   width: 100%;
-
   height: 50%;
   overflow-y: hidden;
   color: white;

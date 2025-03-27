@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../store"; // Путь к файлу с типом RootState
+import { RootState } from "../../store";
 import styled from "styled-components";
 import { Icon } from "../icon/Icon";
 import { theme } from "../../styles/Theme";
@@ -24,26 +24,23 @@ export const Modal = () => {
 
   return (
     <StyledModal>
-      <div className="overlay">
-        <div className="box">
-          <div className="inputs">
-            <input placeholder="name..." />
-            <input placeholder="mail..." />
-            <input />
-          </div>
+      <Overlay>
+        <ModalBox>
+          <Inputs>
+            <Input placeholder="Ваше имя..." />
+            <Input placeholder="Ваш email..." />
+            <Input placeholder="Сообщение для меня..." />
+          </Inputs>
 
-          <div className="buttons">
-            <button onClick={onConfirm} className="btn">
-              Отправить
-            </button>
-          </div>
-          <div className="x">
-            <button onClick={onCancel}>
-              <Icon iconId="x" viewBox="0 0 220 220" transform="scale(0.1)" />
-            </button>
-          </div>
-        </div>
-      </div>
+          <Buttons>
+            <Button onClick={onConfirm}>Отправить</Button>
+          </Buttons>
+
+          <CloseButton onClick={onCancel}>
+            <Icon iconId="x" viewBox="0 0 220 220" transform="scale(0.1)" />
+          </CloseButton>
+        </ModalBox>
+      </Overlay>
     </StyledModal>
   );
 };
@@ -57,91 +54,99 @@ const StyledModal = styled.div`
   bottom: 0;
   width: 100%;
   height: 100%;
+`;
 
-  & .overlay {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
-    z-index: 999999999;
+const Overlay = styled.div`
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 999999999;
+`;
+
+const ModalBox = styled.div`
+  max-width: 400px;
+  height: 270px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #2c2c2c;
+  border: 1px solid black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px rgb(171 162 162 / 22%);
+`;
+
+const Inputs = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+  gap: 10px;
+  width: 100%;
+`;
+
+const Input = styled.input`
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+  font-size: 16px;
+
+  &:focus {
+    border-color: #007bff;
+    outline: none;
   }
+`;
 
-  & .box {
-    max-width: 400px;
-    max-height: 270px;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    z-index: 30;
-    position: relative;
-    top: 50%;
-    transform: translate(0, -50%);
-    background-color: #2c2c2c;
-    border: 1px solid black;
-    padding: 0 20px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    box-shadow: inset 0 0 10px rgb(171 162 162 / 22%);
+const Buttons = styled.div`
+  display: flex;
+  gap: 20px;
+`;
+
+const Button = styled.button`
+  width: 155px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #00c4f0; */
+  background: linear-gradient(45deg, #25edff, #383d3d);
+
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  transform: translateY(20px);
+
+  &:hover {
+    background: linear-gradient(45deg, #307c88, #05191e);
   }
+`;
 
-  .buttons {
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
-    transform: translate(0, 50%);
+const CloseButton = styled.button`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  transform: translate(143px, -26px);
+  cursor: pointer;
+
+  @media screen and (max-width: 450px) {
+    transform: translate(-41px, -27px);
   }
-
-  .btn {
-    width: 115px;
-    height: 35px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #00c4f0;
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-
-  .x {
-    position: absolute;
-    transform: translate(230px, -43px);
-    svg {
-      cursor: pointer;
-    }
-
-    @media ${theme.media.mobile} {
-      transform: translate(49px, -63px);
-    }
-  }
-
-  .inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    transform: translate(0, 20%);
-
-    input {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      transition: border-color 0.3s;
-      font-size: 16px;
-
-      &:focus {
-        border-color: #007bff;
-        outline: none;
-      }
-    }
+  @media ${theme.media.smallMobile} {
+    transform: translate(31px, -27px);
   }
 `;

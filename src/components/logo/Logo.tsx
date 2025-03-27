@@ -14,7 +14,6 @@ export const Logo = () => {
           transform="scale(0.5)"
         />
       </a>
-      {/* <StyledLogoTitle>Hello</StyledLogoTitle> */}
     </StyledLogo>
   );
 };
@@ -23,10 +22,4 @@ const StyledLogo = styled.div`
   display: flex;
   font-size: 18px;
   cursor: pointer;
-  /* margin-top: 29px; */
 `;
-
-// const StyledLogoTitle = styled.div`
-//   margin-top: 20px;
-//   color: white;
-// `;

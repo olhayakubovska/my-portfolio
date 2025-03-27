@@ -1,4 +1,8 @@
-import styled from "styled-components";
+import { StyledContainer } from "../../../components/styled-componets/StyledContainer";
+import { font } from "../../../styles/Common";
+import { theme } from "../../../styles/Theme";
+import Tilt from "react-parallax-tilt";
+
 import image1 from "../../../assets/images/image1.jpg";
 import image1x2 from "../../../assets/images/image1@2x.png";
 import image1x3 from "../../../assets/images/image1@3x.png";
@@ -9,10 +13,7 @@ import image3 from "../../../assets/images/image3.jpg";
 import image3x2 from "../../../assets/images/image3@2x.png";
 import image3x3 from "../../../assets/images/image3@3x.png";
 
-import { StyledContainer } from "../../../components/styled-componets/StyledContainer";
-import { font } from "../../../styles/Common";
-import { theme } from "../../../styles/Theme";
-import Tilt from "react-parallax-tilt";
+import styled from "styled-components";
 
 type StyledEllipseAboutMeType = {
   width?: string;
@@ -37,7 +38,7 @@ export const AboutMe = () => {
                 r="45"
                 stroke="#E4E4E4"
                 strokeWidth="10"
-                fill="#414141"
+                fill="#4141417d"
               />
             </svg>
           </StyledEllipseAboutMe>
@@ -55,7 +56,7 @@ export const AboutMe = () => {
                 r="45"
                 stroke="#00C4F0"
                 strokeWidth="10"
-                fill="#414141"
+                fill="#4141417e"
               />
             </svg>
           </StyledEllipseAboutMe>
@@ -150,7 +151,7 @@ export const AboutMe = () => {
                     r="45"
                     stroke="#E2A200"
                     strokeWidth="10"
-                    fill="#414141"
+                    fill="#41414176"
                   />
                 </svg>
               </StyledEllipseAboutMe2>
@@ -163,33 +164,22 @@ export const AboutMe = () => {
 };
 
 const StyledAboutMe = styled.section`
-  /* border: 1px solid red; */
-
-  /* padding: 140px 0 100px 0; */
   min-height: 1200px;
-  /* min-height: 100vh; */
   display: flex;
   align-items: center;
   justify-content: center;
-
   overflow: hidden;
-
-  /* @media ${theme.media.laptop} {
-    height: 100vh;
-  } */
 
   @media ${theme.media.mobile} {
     height: 90vh;
   }
 
-  @media screen and (max-width: 900px) {
-    transform: translateY(140px);
+  @media screen and (max-width: 950px) {
+    min-height: 950px;
   }
+
   @media screen and (max-width: 764px) {
-    transform: translateY(30px);
-  }
-  @media ${theme.media.mobile} {
-    transform: translateY(110px);
+    padding: 0 0 65px 0;
   }
 `;
 
@@ -218,11 +208,7 @@ const StyledEllipseAboutMe2 = styled.div`
   position: absolute;
   border-radius: 50%;
   width: 361px;
-  /* width: 100%; */
-  /* height: 361px; */
   inset: 15px 46px auto auto;
-  /* inset: 39px 5px auto auto; */
-  /* overflow: hidden; */
   box-shadow: 0 4px 70px rgba(231, 185, 60, 0.868);
 
   @media screen and (max-width: 1024px) {
@@ -289,8 +275,6 @@ const StyledTextAboutMe = styled.p`
 
   @media ${theme.media.smallMobile} {
     padding: 5px;
-
-    /* font-size: ; */
   }
 `;
 
@@ -305,13 +289,11 @@ const StyledPhoto2 = styled.div`
   background-color: #2c2c2c;
   border-radius: 14px;
   margin: 223px 0 0 -23px;
-  /* transform: translateY(223px) translateX(-23px); */
   position: relative;
   z-index: 22222;
 
   @media screen and (max-width: 768px) {
     margin: 0;
-    /* transform: translateY(200px);  */
   }
 
   @media ${theme.media.smallMobile} {
@@ -338,188 +320,27 @@ const StyledTitle = styled.h2`
     family: "NEXT ART",
     weight: 600,
     Fmax: 65,
-    Fmin: 18,
+    Fmin: 20,
     lineHeight: 1.2,
   })}
   transform: translate(0px, -85px);
   color: white;
   position: absolute;
+
+  @media ${theme.media.mobile} {
+    transform: translate(0px, -36px);
+  }
 `;
 
 const StyledPhotoBox = styled.div`
   max-width: 496px;
   position: relative;
-  /* overflow: hidden; */
+
   @media ${theme.media.tablet} {
     margin: 0 auto;
   }
 
   @media ${theme.media.smallMobile} {
     max-width: 251px;
-    /* margin: 40px auto; */
   }
 `;
-
-// const StyledAboutMe = styled.section`
-//   padding: 140px 0 100px 0;
-//   overflow: hidden;
-// `;
-
-// const StyledWrapperAboutMe = styled.div`
-//   position: relative;
-// `;
-
-// const StyledEllipseAboutMe = styled.div<StyledEllipseAboutMeType>`
-//   position: absolute;
-//   border-radius: 50%;
-//   width: ${(props) => props.width || "792px"};
-//   height: ${(props) => props.height || "792px"};
-//   box-shadow: ${(props) =>
-//     props.boxShadow || "0px 4px 70px rgb(228, 228, 228)"};
-//   inset: ${(props) => props.inset || "auto auto auto auto"};
-
-//   @media screen and (max-width: 1124px) {
-//     &:nth-child(1) {
-//       display: none;
-//     }
-//     &:nth-child(2) {
-//       display: none;
-//     }
-//   }
-// `;
-// const StyledEllipseAboutMe2 = styled.div`
-//   position: absolute;
-//   border-radius: 50%;
-//   width: 361px;
-//   height: 361px;
-//   /* box-shadow: 0 4px 70px rgba(226, 162, 0, 0.7); */
-//   inset: 39px 5px auto auto;
-//   overflow: hidden;
-
-//   @media screen and (max-width: 768px) {
-//     inset: 101px 63px;
-//   }
-// `;
-
-// const StyledTextAndImgWrapper = styled.div`
-//   position: relative;
-//   display: flex;
-//   z-index: 9999;
-
-//   @media ${theme.media.tablet} {
-//     display: flex;
-//     flex-wrap: wrap;
-//   }
-// `;
-
-// const StyledPhotoWrap = styled.div`
-//   display: flex;
-//   flex-direction: column;
-
-//   gap: 372px;
-//   width: 100%;
-//   height: 100%;
-//   transform: translateX(22px);
-//   z-index: 99999;
-
-//   @media screen and (max-width: 1124px) {
-//     display: none;
-//   }
-// `;
-
-// const StyledContentWrapper = styled.div`
-//   max-width: 496px;
-//   max-height: 800px;
-//   background-color: #2c2c2c;
-//   padding: 45px;
-//   transform: translate(0, 60px);
-//   border-radius: 14px;
-//   width: 100%;
-//   z-index: 22222;
-
-//   @media screen and (max-width: 768px) {
-//     margin: 0 auto;
-//   }
-//   @media ${theme.media.smallMobile} {
-//     padding: 0;
-//   }
-// `;
-
-// const StyledTextAboutMe = styled.p`
-//   ${font({
-//     weight: 300,
-//     Fmax: 22,
-//     Fmin: 18,
-//     lineHeight: 1.3,
-//   })}
-
-//   @media ${theme.media.smallMobile} {
-//     padding: 5px;
-//   }
-//   background-color: #2c2c2c;
-// `;
-
-// const StyledPhoto = styled.div`
-//   padding: 23px;
-//   background-color: #2c2c2c;
-//   border-radius: 14px;
-// `;
-// const StyledPhoto2 = styled.div`
-//   padding: 23px;
-//   background-color: #2c2c2c;
-//   border-radius: 14px;
-
-//   transform: translateY(223px) translateX(-23px);
-
-//   z-index: 200000;
-//   position: relative;
-
-//   @media screen and (max-width: 768px) {
-//     transform: translate(0);
-//   }
-// `;
-
-// const StyledImage = styled.img`
-//   width: ${(props) => props.width || "281px"};
-//   border: 4px solid #686868;
-
-//   @media ${theme.media.tablet} {
-//     max-width: 241px;
-//     width: 100%;
-//   }
-//   @media ${theme.media.smallMobile} {
-//     max-width: 241px;
-//     width: 100%;
-//   }
-// `;
-
-// const StyledTitle = styled.h2`
-//   ${font({
-//     family: "NEXT ART",
-//     weight: 600,
-//     Fmax: 65,
-//     Fmin: 18,
-//     lineHeight: 1.2,
-//   })}
-//   transform: translate(0px, -85px);
-//   color: white;
-//   position: absolute;
-// `;
-
-// const StyledPhotoBox = styled.div`
-//   /* transform: translateY(223px) translateX(-23px); */
-//   max-width: 496px;
-//   /* height: 700px; */
-//   position: relative;
-
-//   @media ${theme.media.tablet} {
-//     transform: translate(0);
-//     margin: 20px auto;
-//     /* overflow: hidden; */
-//   }
-//   @media ${theme.media.smallMobile} {
-//     max-width: 251px;
-//     margin: 40px auto;
-
-//   }
-// `;

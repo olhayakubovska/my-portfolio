@@ -1,31 +1,20 @@
 import { StyledFlexWrapper } from "../../../components/styled-componets/FlexWrapper";
-// import { StyledEllipse } from "../../../components/styled-componets/StyledEllipse";
 import { useDispatch } from "react-redux";
+import { StyledContainer } from "../../../components/styled-componets/StyledContainer";
+import { font } from "../../../styles/Common";
+import { theme } from "../../../styles/Theme";
+import Typewriter from "typewriter-effect";
+
 import mainPhoto from "../../../assets/images/mainPhoto.png";
 import mainPhotox1 from "../../../assets/images/mainPhoto@1x.png";
 import mainPhotox2 from "../../../assets/images/mainPhoto@2x.png";
 import mainPhotox3 from "../../../assets/images/mainPhoto@3x.png";
 
 import styled from "styled-components";
-import { StyledContainer } from "../../../components/styled-componets/StyledContainer";
-import { font } from "../../../styles/Common";
-import { theme } from "../../../styles/Theme";
-// import { theme } from "../../../styles/Theme";
-import Typewriter from "typewriter-effect";
-// import { Particle } from "../../../components/particle/Particle";
-// import Tilt from "react-parallax-tilt";
 
 type StyledMainSkillType = {
   inset?: string;
 };
-
-// type EllipseType2 = {
-//   width?: string;
-//   height?: string;
-//   boxShadow?: string;
-//   borderRadius?: string;
-//   inset?: string;
-// };
 
 export const Main = () => {
   const dispatch = useDispatch();
@@ -36,8 +25,6 @@ export const Main = () => {
 
   return (
     <StyledMain id="main">
-      {/* <Particle /> */}
-
       <StyledContainer>
         <StyledFlexWrapper gap="20px" justify="space-between">
           <StyledMainText>
@@ -76,11 +63,11 @@ export const Main = () => {
                 />
               </svg>
             </StyledEllipse2>
-            <StyledSmallEllipse inset="6% 8%">js</StyledSmallEllipse>
+            <StyledSmallEllipse inset="6% 8%">JS</StyledSmallEllipse>
 
-            <StyledSmallEllipse inset="47% -9%">js</StyledSmallEllipse>
-            <StyledSmallEllipse inset="81% 9%">js</StyledSmallEllipse>
-            <StyledSmallEllipse inset="6% 76%">js</StyledSmallEllipse>
+            <StyledSmallEllipse inset="47% -9%">TS</StyledSmallEllipse>
+            <StyledSmallEllipse inset="81% 9%">UI</StyledSmallEllipse>
+            <StyledSmallEllipse inset="6% 76%">UX</StyledSmallEllipse>
             <picture>
               <source
                 srcSet={` ${mainPhotox1} 1x , ${mainPhotox2} 2x, ${mainPhotox3} 3x`}
@@ -96,19 +83,23 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  /* border: 1px solid red; */
-
   position: relative;
-  min-height: 70vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
   color: white;
-  transform: translateY(50px);
+  transform: translateY(80px);
+  padding: 15px 0 15px 0;
 
+  @media screen and (min-width: 940px) {
+    margin-top: 85px;
+    height: 50vh;
+  }
   @media screen and (max-width: 1015px) {
-    transform: translateY(120px);
+    transform: translateY(65px);
+    height: 100vh;
 
     ${StyledFlexWrapper} {
       flex-wrap: wrap;
@@ -127,8 +118,8 @@ const StyledSmallEllipse = styled.div<StyledMainSkillType>`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 34px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 900;
   inset: ${(props) => props.inset || "auto 0 0 auto"};
 
   @media ${theme.media.laptop} {
@@ -157,7 +148,6 @@ const StyledWrapperPhotoAndEllipse = styled.div`
 
   @media ${theme.media.laptop} {
     transform: translateY(30px);
-    /* margin-top: 40px; */
     max-width: 400px;
     height: 400px;
     margin: 0 auto;
@@ -170,9 +160,8 @@ const StyledWrapperPhotoAndEllipse = styled.div`
   }
 
   @media ${theme.media.smallMobile} {
-    min-width: 180px;
-    height: 200px;
-    overflow: hidden;
+    width: 240px;
+    height: 240px;
   }
 `;
 
@@ -183,7 +172,6 @@ const StyledEllipse2 = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  /* box-shadow: 0px 4px 70px 0 rgba(0, 196, 240, 0.4); */
 
   svg {
     width: 100%;
@@ -199,7 +187,6 @@ const StyledMainPhoto = styled.img`
   max-width: 456px;
 
   @media ${theme.media.laptop} {
-    /* inset: 0 10%; */
     max-width: 350px;
   }
 
@@ -208,9 +195,9 @@ const StyledMainPhoto = styled.img`
     max-width: 250px;
   }
   @media ${theme.media.smallMobile} {
-    inset: -16% 10%;
+    inset: -14% 14%;
 
-    max-width: 170px;
+    max-width: 190px;
     width: 100%;
   }
 `;

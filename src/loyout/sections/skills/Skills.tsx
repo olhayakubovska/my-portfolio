@@ -1,77 +1,79 @@
-import styled from "styled-components";
 import { StyledFlexWrapper } from "../../../components/styled-componets/FlexWrapper";
 import { Icon } from "../../../components/icon/Icon";
 import { StyledContainer } from "../../../components/styled-componets/StyledContainer";
 import { theme } from "../../../styles/Theme";
 import { StyledTitle } from "../works/Works";
 import { Fade } from "react-awesome-reveal";
+import styled from "styled-components";
 
 export const Skills = () => {
   return (
     <StyledSkills id={"skills"}>
       <StyledContainer>
-        <StyledTitle>Мои знания</StyledTitle>
-        <StyledFlexWrapper
-          justify="center"
-          wrap="wrap"
-          gap="20px"
-          align="center"
-        >
-          <Fade cascade={true} damping={0.3}>
-            <StyledIcon>
-              <Icon iconId="html" viewBox="5 5  100 100" />
-            </StyledIcon>
+        <Wrap>
+          <StyledTitle>Мои знания</StyledTitle>
+          <StyledFlexWrapper
+            justify="center"
+            wrap="wrap"
+            gap="20px"
+            align="center"
+          >
+            <Fade cascade={true} damping={0.3}>
+              <StyledIcon>
+                <Icon iconId="html" viewBox="5 5  100 100" />
+              </StyledIcon>
 
-            <StyledIcon>
-              <Icon iconId="css" viewBox="5 5  100 100" />
-            </StyledIcon>
-            <StyledIcon>
-              <Icon iconId="react" viewBox="0 0 103 103" />
-            </StyledIcon>
-            <StyledIcon>
-              <Icon iconId="js" viewBox="0 0 102 102" />
-            </StyledIcon>
-            <StyledIcon>
-              <Icon iconId="nodeJs" viewBox="0 0 102 102" />
-            </StyledIcon>
-            <StyledIcon>
-              <Icon iconId="figma" viewBox="-5 -7 110 110" />
-            </StyledIcon>
-            <StyledIcon>
-              <Icon iconId="git" viewBox=" 0 0 103 103" />
-            </StyledIcon>
-            <StyledIcon>
-              <Icon iconId="github" viewBox=" 0 0 102 102" />
-            </StyledIcon>
-          </Fade>
-        </StyledFlexWrapper>
+              <StyledIcon>
+                <Icon iconId="css" viewBox="5 5  100 100" />
+              </StyledIcon>
+              <StyledIcon>
+                <Icon iconId="react" viewBox="0 0 103 103" />
+              </StyledIcon>
+              <StyledIcon>
+                <Icon iconId="js" viewBox="0 0 102 102" />
+              </StyledIcon>
+              <StyledIcon>
+                <Icon iconId="nodeJs" viewBox="0 0 102 102" />
+              </StyledIcon>
+              <StyledIcon>
+                <Icon iconId="figma" viewBox="-5 -7 110 110" />
+              </StyledIcon>
+              <StyledIcon>
+                <Icon iconId="git" viewBox=" 0 0 103 103" />
+              </StyledIcon>
+              <StyledIcon>
+                <Icon iconId="github" viewBox=" 0 0 102 102" />
+              </StyledIcon>
+            </Fade>
+          </StyledFlexWrapper>
+        </Wrap>
       </StyledContainer>
     </StyledSkills>
   );
 };
 
 const StyledSkills = styled.section`
-  /* border: 1px solid red; */
-  /* transform: translateY(150px); */
-  /* position: relative; */
-  min-height: 90vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   z-index: 2;
 
-  @media screen and (max-width: 1000px) {
-    transform: translateY(130px);
+  @media screen and (max-width: 969px) {
+    padding: 0 0 50px 0;
   }
-
-  /* @media ${theme.media.mobile} {
-    transform: translateY(130px);
-  } */
-  /* @media screen and (max-width: 550px) {
-    margin-top: 40px;
-  } */
 `;
+
+const Wrap = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  padding: 50px 0 50px 0;
+`;
+
 const StyledIcon = styled.div`
   border-radius: 29px;
   width: 250px;
@@ -79,11 +81,8 @@ const StyledIcon = styled.div`
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.47);
   background: #2a2a2a;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
-  /* gap: 30px; */
-  /* padding: 20px 20px 50px 20px; */
 
   svg {
     width: 100px;
@@ -118,11 +117,5 @@ const StyledIcon = styled.div`
   @media ${theme.media.smallMobile} {
     width: 70px;
     height: 70px;
-    /* overflow: hidden; */
-
-    /* svg {
-      width: 40px;
-      height: 40px;
-    } */
   }
 `;

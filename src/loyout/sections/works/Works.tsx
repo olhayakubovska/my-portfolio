@@ -1,11 +1,12 @@
 import { useState } from "react";
-import styled from "styled-components";
+import { StyledContainer } from "../../../components/styled-componets/StyledContainer";
+import { font } from "../../../styles/Common";
+
 import image1 from "../../../assets/images/img1.png";
 import image2 from "../../../assets/images/img2.png";
 import image3 from "../../../assets/images/img3.png";
-import { StyledContainer } from "../../../components/styled-componets/StyledContainer";
-import { font } from "../../../styles/Common";
-// import { theme } from "../../../styles/Theme";
+
+import styled from "styled-components";
 
 export const Works = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -72,7 +73,10 @@ export const Works = () => {
 
 const StyledSlider = styled.section`
   display: flex;
-  max-height: 90vh;
+
+  @media screen and (min-width: 939px) {
+    padding: 50px 0;
+  }
 `;
 
 const StyledSlideContainer = styled.div`
@@ -82,19 +86,12 @@ const StyledSlideContainer = styled.div`
   gap: 40px;
   padding: 40px;
   border-radius: 29px;
-  background-color: #2c2c2c;
+  background-color: #262626;
   justify-content: space-around;
   margin: 0 auto;
 
   flex-wrap: wrap;
-  /* transition: opacity 0.3s ease; */
-
-  /* &.fade-in {
-    opacity: 1;
-  }
-  &.fade-out {
-    opacity: 0;
-  } */
+  position: relative;
 `;
 
 const StyledSlideImage = styled.div`
@@ -108,7 +105,7 @@ const StyledSlideImage = styled.div`
     opacity: 0;
   }
 
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 838px) {
     & img {
       max-width: 296px;
       width: 100%;

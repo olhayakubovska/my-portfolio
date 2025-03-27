@@ -7,11 +7,12 @@ import { Footer } from "./loyout/footer/Footer";
 import { AboutMe } from "./loyout/sections/aboutme/AboutMe";
 import { Modal } from "./components/modal/Modal";
 import { GoTopBtn } from "./components/goTopBtn/GoTopBtn";
-// import { Particle } from "./components/particle/Particle";
+import { Particle } from "./components/particle/Particle";
 
 function App() {
   return (
     <StyledContainerApp>
+      <Particle />
       <Header />
       <Main />
       <Skills />
@@ -30,5 +31,5 @@ const StyledContainerApp = styled.div`
   max-width: 1920px;
   margin: 0 auto;
   position: relative;
-  /* background-image: linear-gradient(120deg, #1c1c1c, #414141); */
+  background-image: linear-gradient(100deg, #1d1c1c7a, #2b2b2b79);
 `;

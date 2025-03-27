@@ -2,7 +2,7 @@ import styled from "styled-components";
 import iconsSprite from "../../assets/images/sprite.svg";
 
 type IconProps = {
-  iconId: string;
+  iconId?: string;
   width?: string;
   height?: string;
   transform?: string;

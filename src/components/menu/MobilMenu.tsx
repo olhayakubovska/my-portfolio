@@ -151,18 +151,6 @@ const StyledMenuPopup = styled.div<{ isOpen: boolean }>`
     `}
 `;
 
-// const StyledHeaderMenu = styled.nav`
-//   ul {
-//     display: flex;
-//     align-items: center;
-//     width: 590px;
-//     /* width: 100%; */
-//     justify-content: space-between;
-//     font-size: 18px;
-//     color: white;
-//   }
-// `;
-
 const Mask = styled.span`
   position: absolute;
   top: 0;

@@ -36,6 +36,7 @@ export const GoTopBtn = () => {
 
 const GoTopBtnStyled = styled.button`
   position: fixed;
+  z-index: 999999999999999;
   right: 30px;
   bottom: 30px;
   width: 40px;
