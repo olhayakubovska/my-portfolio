@@ -1,15 +1,16 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import commonjs from 'vite-plugin-commonjs';
-
+import commonjs from "vite-plugin-commonjs";
 
 export default defineConfig({
+  base: "/my-portfolio/",
   plugins: [
     react({
       babel: {
         plugins: ["babel-plugin-styled-components"],
       },
-    }),  commonjs()
+    }),
+    commonjs(),
   ],
   resolve: {
     alias: {
@@ -17,6 +18,6 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ["react-slick"]
-  }
+    include: ["react-slick"],
+  },
 });
