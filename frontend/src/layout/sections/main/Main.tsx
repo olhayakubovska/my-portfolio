@@ -24,22 +24,22 @@ export const Main = () => {
             <S.Title>
               <Typewriter
                 options={{
-                  strings: ["Привет!"],
+                  strings: ["Hello!"],
                   autoStart: true,
                   loop: true,
                 }}
               />
             </S.Title>
-            <S.Subtitle>Меня зовут Оля</S.Subtitle>
+            <S.Subtitle>My name is Olha</S.Subtitle>
             <S.Description>
-              Я начинающий Frontend Developer,
+              I'm an aspiring Frontend Developer,
               <br />
-              увлечённая созданием современных, удобных и адаптивных
-              веб-приложений. Если вам нужен красивый и функциональный сайт —
-              свяжитесь со мной, и я помогу вам!
+              passionate about creating modern, user-friendly and responsive
+              web applications. If you need a beautiful and functional
+              website — get in touch, and I'll help you!
             </S.Description>
             <S.ContactButton onClick={onOpenModal}>
-              Свяжитесь со мной
+              Contact Me
             </S.ContactButton>
           </S.MainText>
 

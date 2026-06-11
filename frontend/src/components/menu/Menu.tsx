@@ -1,10 +1,10 @@
 import { S } from "./Menu_Styled";
 
 const menuItems = [
-  { title: "Главная", href: "main" },
-  { title: "Мои знания", href: "skills" },
-  { title: "Обо мне", href: "aboutme" },
-  { title: "Мои работы", href: "portfolio" },
+  { title: "Home", href: "main" },
+  { title: "Skills", href: "skills" },
+  { title: "About Me", href: "aboutme" },
+  { title: "My Works", href: "portfolio" },
 ];
 
 type MenuPropsType = {

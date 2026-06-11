@@ -44,7 +44,7 @@ const EllipseAboutMe = styled.div<StyledEllipseAboutMeType>`
 
   /* width: 1400px; */
 
-  /* смещаем за пределы контейнера */
+  /* shift outside the container */
   /* top: -150px;
   left: -200px;
 

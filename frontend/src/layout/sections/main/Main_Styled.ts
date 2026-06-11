@@ -23,9 +23,9 @@ const Main = styled.section`
 
     /* position: relative; */
   width: 100%;
-  min-height: 80vh; /* или 100vh, если нужно */
+  min-height: 80vh; /* or 100vh if needed */
 
-  overflow: hidden; /* важно! чтобы частицы не вылезали */
+  overflow: hidden; /* important! so particles don't overflow */
   /* z-index: 999; */
   /* opacity: 0.2; */
   /* background-color: rgba(33, 33, 33, 0.3); */
@@ -39,7 +39,7 @@ const Main = styled.section`
   @media screen and (max-width: 1015px) {
     margin-top: 85px;
 
-    min-height: auto; /* секция сама растягивается под контент */
+    min-height: auto; /* section stretches to fit content */
     ${StyledFlexWrapper} {
       flex-wrap: wrap;
     }
@@ -48,7 +48,7 @@ const Main = styled.section`
 
 // const PhotoShadow = styled.div`
 //   position: absolute;
-//   bottom: 40px; /* регулируй отступ от низа */
+//   bottom: 40px; /* adjust the bottom offset */
 //   left: 50%;
 //   transform: translateX(-50%);
 //   width: 70%;

@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store";
 import { Icon } from "../icon/Icon";
-import { S } from "./Modal_Styled"; // Импорт стилей
+import { S } from "./Modal_Styled"; // Style imports
 import { useState } from "react";
 
 export const Modal = () => {
@@ -20,7 +20,7 @@ export const Modal = () => {
 
   const onConfirm = async () => {
     try {
-      // setStatus("Отправка...");
+      // setStatus("Sending...");
 
       const res = await fetch("/api/form", {
         method: "POST",
@@ -32,16 +32,16 @@ export const Modal = () => {
       console.log(data, "data");
 
       if (res.ok) {
-        // setStatus("Успешно отправлено");
+        // setStatus("Successfully sent");
         setForm({ name: "", email: "", message: "" });
-        // закрываем модалку
+        // close the modal
         dispatch({ type: "CLOSE_MODAL" });
       } else {
-        // setStatus(data.error || "Ошибка отправки");
+        // setStatus(data.error || "Send error");
       }
     } catch (err) {
       console.error(err);
-      // setStatus("Сетевая ошибка");
+      // setStatus("Network error");
     }
     dispatch({ type: "CLOSE_MODAL" });
   };
@@ -67,24 +67,24 @@ export const Modal = () => {
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="Ваше имя..."
+              placeholder="Your name..."
             />
             <S.Input
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="Ваш email..."
+              placeholder="Your email..."
             />
             <S.Input
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="Сообщение для меня..."
+              placeholder="Message for me..."
             />
           </S.Inputs>
 
           <S.Buttons>
-            <S.Button onClick={onConfirm}>Отправить</S.Button>
+            <S.Button onClick={onConfirm}>Send</S.Button>
           </S.Buttons>
           {/* {status && <div>{status}</div>} */}
 

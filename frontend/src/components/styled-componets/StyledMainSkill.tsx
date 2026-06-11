@@ -36,10 +36,10 @@
 //   position: absolute;
 //   top: 50%;
 //   left: 50%;
-//   transform: translate(-50%, -50%);  /* Центрирует элемент */
+//   transform: translate(-50%, -50%);  /* Centers the element */
 //   font-size: 24px;
 //   color: white;
-//   z-index: 10;  /* Размещение поверх круга */
+//   z-index: 10;  /* Places it above the circle */
 
 // }
 // `;

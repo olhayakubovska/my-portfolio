@@ -11,7 +11,7 @@
 //     <StyledSkills id={"skills"}>
 //       <StyledContainer>
 //         <Wrap>
-//           <StyledTitle>Мои знания</StyledTitle>
+//           <StyledTitle>Skills</StyledTitle>
 //           <StyledFlexWrapper
 //             justify="center"
 //             wrap="wrap"
@@ -124,7 +124,7 @@ import { StyledFlexWrapper } from "../../../components/styled-componets/FlexWrap
 import { Icon } from "../../../components/icon/Icon";
 import { StyledContainer } from "../../../components/styled-componets/StyledContainer";
 import { Fade } from "react-awesome-reveal";
-import { S } from "./Skills_styled"; // Импорт стилей
+import { S } from "./Skills_styled"; // Style imports
 import { Title } from "../../../components/styled-componets/Title";
 
 export const Skills = () => {
@@ -132,7 +132,7 @@ export const Skills = () => {
     <S.Skills id="skills">
       <StyledContainer>
         <S.Wrap>
-          <Title>Мои знания</Title>
+          <Title>Skills</Title>
           <StyledFlexWrapper justify="center" wrap="wrap" gap="20px" align="center">
             <Fade cascade damping={0.3}>
               <S.IconBox><Icon iconId="html" viewBox="5 5  100 100" /></S.IconBox>

@@ -96,26 +96,26 @@ export const AboutMe = () => {
             </S.PhotoWrap>
 
             <S.ContentWrapper>
-              <S.Title>Обо мне</S.Title>
+              <S.Title>About Me</S.Title>
               <S.TextAboutMe>
-                Меня зовут Оля, мне 25 лет, я родом из Украины, но живу в
-                Польше. Я — начинающий Frontend-разработчик, изучаю
-                веб-разработку и совершенствую свои навыки. Использую JavaScript
-                (ES6+), TypeScript, React, Redux Toolkit (RTK Query), React
-                Router, React Hook Form, а также Axios, REST API и принципы
-                CRUD. Знакома с ExpressJS и MongoDB, работаю с Git, тестирую с
-                помощью Jest и Storybook, оформляю интерфейсы с HTML5, CSS3,
-                SCSS, CSS Modules, Styled Components и Material UI. Среди моих
-                проектов — ToDo List с CRUD-операциями, валидацией через React
-                Hook Form и Zod, управлением состоянием и интеграцией API, а
-                также интернет-магазин My Shop (React + Node.js/Express +
-                MongoDB) с авторизацией и удобным интерфейсом. Программирование
-                — это профессия будущего, которая мне нравится; я стремлюсь
-                развиваться и реализовать мечту — путешествовать.
+                My name is Olha, I'm 25 years old, originally from Ukraine but
+                currently living in Poland. I'm an aspiring Frontend
+                developer, learning web development and improving my skills.
+                I use JavaScript (ES6+), TypeScript, React, Redux Toolkit (RTK
+                Query), React Router, React Hook Form, as well as Axios, REST
+                API and CRUD principles. I'm familiar with ExpressJS and
+                MongoDB, work with Git, test with Jest and Storybook, and
+                style interfaces with HTML5, CSS3, SCSS, CSS Modules, Styled
+                Components and Material UI. Among my projects are a ToDo List
+                with CRUD operations, validation via React Hook Form and Zod,
+                state management and API integration, as well as the My Shop
+                online store (React + Node.js/Express + MongoDB) with
+                authorization and a user-friendly interface. Programming is a
+                profession of the future that I enjoy; I strive to grow and
+                fulfill my dream of traveling.
                 <br />
-                Если я вас заинтересовала, вы хотите узнать обо мне больше или
-                воспользоваться моими услугами, то все мои контакты я укажу
-                ниже.
+                If I caught your interest, you'd like to learn more about me,
+                or use my services, you'll find all my contacts below.
               </S.TextAboutMe>
             </S.ContentWrapper>
 
